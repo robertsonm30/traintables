@@ -41,29 +41,19 @@
 		var trainname = childSnapshot.val().train;
 		var traindestination = childSnapshot.val().destination;
 		var trainfrequency = childSnapshot.val().frequency;
+		var tfrq = moment(trainfrequency);
 
-  // var empStartPretty = moment.unix(empStart).format("MM/DD/YY");
-  // // Calculate the months worked using hardcore math
-  // // To calculate the months worked
-  // var empMonths = moment().diff(moment.unix(empStart, "X"), "months");
-  // console.log(empMonths);
-  // // Calculate the total billed rate
-  // var empBilled = empMonths * empRate;
-  // console.log(empBilled);
 
 
   		var currentTime = moment().format("hh:mm a");
-  		var modfreq = moment().add(trainfrequency, 'm');
+  		var modfreq = moment().add(tfrq, 'm');
 
 
   		console.log("FREQ" +modfreq);
 
 		
 
-  // 		var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-	 //  	var tRemainder = diffTime % tFrequency;
-		// var tMinutesTillTrain = currentTime - modfreq;
-		// var nextTrain = moment().add(tMinutesTillTrain, "m");
+
 		var tMinutesTillTrain = "";
 		var nextTrain = "";
 
